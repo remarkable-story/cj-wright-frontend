@@ -1,0 +1,27 @@
+.form{
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+    margin-left: 25%;
+
+
+}
+.title {
+    font-size: 8.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.subtext {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.Button{
+    padding-left: .3125rem;
+}
