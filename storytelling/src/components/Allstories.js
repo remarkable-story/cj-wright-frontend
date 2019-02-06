@@ -28,7 +28,7 @@ color: black;
  const Allstories = ({ stories }) => {
   return (
     <div>
-    <SecondaryHeading style={{marginTop: '100px'}}>Your Stories:</SecondaryHeading>
+    <SecondaryHeading style={{marginTop: '100px', color:'white'}}>Your Stories:</SecondaryHeading>
 
       <CardsContainer>
         {stories.map(story => (

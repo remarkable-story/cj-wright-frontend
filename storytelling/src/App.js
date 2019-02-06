@@ -30,7 +30,9 @@ class App extends Component {
 
   createStory = newStory => {
     axios
-      .post(`https://remarkable-story-backend.herokuapp.com/api/stories`, { newStory })
+      .post(`https://remarkable-story-backend.herokuapp.com/api/stories`, {
+        newStory
+      })
       .then(response => {
         newStory.id = response.data.success;
 
@@ -42,7 +44,10 @@ class App extends Component {
   };
   editStory = (id, editedStory) => {
     axios
-      .put(`https://remarkable-story-backend.herokuapp.com/api/stories${id}`, editedStory)
+      .put(
+        `https://remarkable-story-backend.herokuapp.com/api/stories${id}`,
+        editedStory
+      )
       .then(response => {
         console.log(response);
         editedStory.id = response.data;
@@ -59,7 +64,9 @@ class App extends Component {
   // if id === id return response.data return story
   deleteStory = id => {
     axios
-      .delete(`https://fe-stories.herokuapp.com/story/deletehttps://remarkable-story-backend.herokuapp.com/api/stories/${id}`)
+      .delete(
+        `https://fe-stories.herokuapp.com/story/deletehttps://remarkable-story-backend.herokuapp.com/api/stories/${id}`
+      )
       .then(response => {
         const deleteStory = this.state.stories.filter(story => {
           console.log(story.id, id, story.id !== id);
@@ -71,24 +78,19 @@ class App extends Component {
       });
   };
 
-
-
-
-
-
-
-
   render() {
     return (
-      <div
-        style={{
-          backgroundImage:
-            "linear-gradient( #e0e2e4, #c8ccce, #b1b7b6, #9da29d, #8c8c86)"
-        }}
-      >
-      <Header />
-      <Sidebar />
-      <MainContent>
+      <div>
+        <Header />
+        <Sidebar />
+        <MainContent style={{  backgroundImage: "url(" + "https://lh3.googleusercontent.com/pxPWx06weuwYKbTWua9vLFhExbD4wWeaB8a9PCjBBK3sD3QAOptErowYaEBcELAXqe7QY8j0eyGhDlS2mln3ITeSYCFUKd2O82tAweYs-phxbhfinOXK2ozoEuFB9smvMgH2zTJmGq5cNko5WmK6p7qmvAPF2CSFyiMBFVAis169TooTIxUoVO3MjFh52Z-VF0WidMYe3aw7Aj_mrf_Tb0qTygG1LD4S2w4oKJm8ob2MqzxoEGzK8GOYQogDxw2VFITwVWo9WdQYxLzFfRZy1wPr8J-Wdi6rlSWi8nb8WHvWUnu-BJJt1jg9Ykc0S6U37KrrJs0I1mDOvdI8QWGT144LY9tk5d4NiqcZpqluMcdzsHBC0qG2Nzh-05fqvB7_e6vrm8cRx3BHrHqSaNpQU6zdnQEfsMG0VeEZtajSRq9Ed2sY4txtXVeLsDJeUUgXW06VR7uTTIangP4lX7FfEsDsFidcjxubowJYt5JF6G5U0K5XrSa54a_n4b8Y3owi-VsjRxnivgHHn-gZrgqnDBByNLsEtr8gs2PV_1WQvsg_LbWANos5uKKS_dGucEXR9L9m-BYtzq8sXEh_Ek4QWB4fPN2bUj1bje577ESqwQ4j1Yuq_wkKGOSiaZ82YgwKo9SM2bIu_kfh0Fis_Pr_XGb_Id84EVNW=w1600-h1200-no" + ")",
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment:'fixed',
+       brightness:"119%",
+
+        }}>
           <Route
             exact
             path="/"
@@ -108,9 +110,10 @@ class App extends Component {
           />
           <Route
             path="/editstory/:id"
-            render={props => <EditStory editStory={this.editStory} {...props} />}
+            render={props => (
+              <EditStory deleteStory={this.editStory} {...props} />
+            )}
           />
-
         </MainContent>
       </div>
     );

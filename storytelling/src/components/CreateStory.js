@@ -13,12 +13,13 @@ const SideButton = styled.button`
   text-align: center;
   font-size: inherit;
   font-weight: bold;
-  color: #831332;
-  background-color: #831332;
+  color: #FBA423;
+  background-color: #FBA423;
   border: none;
   border-radius: 5px;
   display: block;
   cursor: pointer;
+  margin-bottom: 100%;
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
@@ -43,6 +44,7 @@ const SecondaryHeading = styled.h2`
 class CreateStory extends Component {
   state = {
     title: "",
+    country: "",
     description: ""
   };
   handleChange = event => {
@@ -53,6 +55,7 @@ class CreateStory extends Component {
     event.preventDefault();
     const newStory = {
       title: this.state.title,
+      country:this.state.country,
       description: this.state.description
     };
     console.log(newStory);
@@ -63,7 +66,7 @@ class CreateStory extends Component {
   render() {
     return (
       <div>
-        <SecondaryHeading style={{marginTop: '100px'}}>Create New Story:</SecondaryHeading>
+        <SecondaryHeading style={{marginTop: '100px',color:"white"}}>Create New Story:</SecondaryHeading>
 
         <StyledStory>
           <form onSubmit={this.handleSubmit}>
@@ -87,7 +90,7 @@ class CreateStory extends Component {
               rows="20"
               onChange={this.handleChange}
             />
-            <SideButton style={{ backgroundColor: "#00A3FF" }}>SAVE</SideButton>
+            <SideButton style={{ backgroundColor: "#FBA423", color:"white" }}>SAVE</SideButton>
           </form>
         </StyledStory>
       </div>

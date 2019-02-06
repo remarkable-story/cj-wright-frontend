@@ -17,6 +17,7 @@ const SideButton = styled.button`
   border-radius: 5px;
   display: block;
   cursor: pointer;
+
   &:not(:last-child) {
   }
 `;
@@ -45,7 +46,7 @@ class Navbar extends Component {
     return (
       <nav
         style={{
-          backgroundColor: "#831332",
+          backgroundColor: "#FBA423",
           position: "fixed",
           top: 0,
           right: 0,
@@ -53,7 +54,9 @@ class Navbar extends Component {
           zIndex: 500,
           paddingTop: "1rem",
           paddingBottom: "1rem",
-          width: "100vw"
+          width: "100vw",
+          boxShadow: "1px 5px 8px 3px rgba(0,0,0,0.75)"
+
         }}
       >
       <Search />

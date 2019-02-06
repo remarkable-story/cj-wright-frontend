@@ -11,7 +11,7 @@ const SideButton = styled.button`
   text-align: center;
   font-size: inherit;
   font-weight: bold;
-  color: #831332;
+  color: #FBA423;
   background-color: rgb(55.8%, 54.1%, 53.8%);
   border: none;
   border-radius: 5px;
@@ -68,7 +68,7 @@ class ViewStory extends Component {
 
         <StyledStory>
           <div>
-            <SideButton style={{ backgroundColor: "#831332" }}>
+            <SideButton style={{ backgroundColor: "#FBA423" }}>
               <Link
                 to={`/editstory/${this.state.id}`}
                 style={{ color: "white" }}
@@ -76,6 +76,7 @@ class ViewStory extends Component {
                 EDIT
               </Link>
             </SideButton>
+            <SideButton style={{backgroundColor: '#FBA423',color: 'white'}} onClick={this.helper}>DELETE</SideButton>
           </div>
         </StyledStory>
       </div>

@@ -27,7 +27,7 @@ const SideButton = styled.button`
   font-size: inherit;
   font-weight: bold;
   color: white;
-  background-color: #831332;
+  background-color: #FBA423;
   border: none;
   border-radius: 5px;
   display: block;
@@ -43,17 +43,20 @@ color: #000;
 `
 const SideBar = () => {
   return (
-    <StyledSideBar>
+    <StyledSideBar style={{  backgroundImage: "url(" + "https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/QIAQ9Rd/blur-beach-video-animation_vy8c6gu2__F0000.png" + ")",
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',}}>
       <MainHeading style={{marginTop: 150}}>
       <styLink>
-        <Link to="/" style={{color:'black'}}>Storytelling </Link>
+        <Link to="/" style={{color:'black',fontFamily:'Raleway'}}>Bountiful </Link>
       </styLink>
       </MainHeading>
       <SideButton>
-        <Link to="/" style={{color:'white', backgroundColor: '#831332'}}>View Your Stories</Link>
+        <Link to="/" style={{color:'white', backgroundColor: '#FBA423'}}>View Your Stories</Link>
       </SideButton>
       <SideButton>
-        <Link to="/createstory" style={{color:'white', backgroundColor: '#831332'}}>+Create a New Story</Link>
+        <Link to="/createstory" style={{color:'white', backgroundColor: '#FBA423'}}>+Create a New Story</Link>
       </SideButton>
     </StyledSideBar>
   );
