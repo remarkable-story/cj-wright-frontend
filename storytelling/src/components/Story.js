@@ -7,14 +7,14 @@ import styled from "styled-components";
 
 const SingleCard = styled.div`
   padding: 7rem;
-  background-color: white;
-  width: 20rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 10rem;
   box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
 -webkit-box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
-  height: 10rem;
+  height: 15rem;
   margin: 1.5rem;
-  border-radius: 300px;
+  border-radius: 100px;
 `;
 
 const CardTitle = styled.h3`

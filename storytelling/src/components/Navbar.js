@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Search from './Search';
-
-
+import Search from "./Search";
 
 //  handleChange(event) {
 //     let StorysToSearch = [];
@@ -38,10 +36,9 @@ class Navbar extends Component {
           paddingBottom: "1rem",
           width: "100vw",
           boxShadow: "1px 3px 6px 2px rgba(0,0,0,0.75)"
-
         }}
       >
-      <Search />
+        <Search />
         <header
           style={{
             display: "flex",
@@ -55,18 +52,24 @@ class Navbar extends Component {
             Storytelling
           </Link>
         </header>
-        <footer style={{
-          backgroundColor: "#00D9FF",
-          position: "fixed",
-          bottom: 0,
-          right: 0,
-          left: 0,
-          zIndex: 500,
-          paddingBottom: "6rem",
-          width: "100vw",
-
-        }}></footer>
-
+        <footer
+          style={{
+            backgroundColor: "#00D9FF",
+            position: "fixed",
+            bottom: 0,
+            right: 0,
+            left: 0,
+            zIndex: 500,
+            paddingBottom: "4.75rem",
+            width: "100vw",
+            color: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          copyright 2019
+        </footer>
       </nav>
     );
   }

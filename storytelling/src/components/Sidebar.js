@@ -19,7 +19,7 @@ const StyledSideBar2 = styled.div`
   top: 0;
   right: 0;
   height: 100%;
-  width: 175px;
+  width: 120px;
   background-color: blue;
   padding: 1.5rem;
   text-decoration: none;
