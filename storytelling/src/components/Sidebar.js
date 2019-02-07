@@ -14,6 +14,16 @@ const StyledSideBar = styled.div`
   padding: 1.5rem;
   text-decoration: none;
 `;
+const StyledSideBar2 = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 175px;
+  background-color: blue;
+  padding: 1.5rem;
+  text-decoration: none;
+`;
 const MainHeading = styled.h1`
   font-size: 3rem;
   margin-bottom: 2rem;
@@ -58,6 +68,10 @@ const SideBar = () => {
       <SideButton>
         <Link to="/createstory" style={{color:'white', backgroundColor: '#FBA423'}}>+Create a New Story</Link>
       </SideButton>
+      <StyledSideBar2 style={{  backgroundImage: "url(" + "https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/QIAQ9Rd/blur-beach-video-animation_vy8c6gu2__F0000.png" + ")",
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',}}/>
     </StyledSideBar>
   );
 };

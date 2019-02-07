@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const SideButton = styled.button`
-  width: 80%;
+  width: 60%;
   padding: 1rem;
-  margin: 0 10px;
+  margin: 10px 10px;
+  margin-left: 190%;
   text-decoration: none;
   text-align: center;
   font-size: inherit;
@@ -89,20 +90,22 @@ class ViewStory extends Component {
             >
               {this.state.story.description}
             </div>
-            <SideButton style={{ backgroundColor: "#FBA423" }}>
-              <Link
-                to={`/editstory/${this.state.id}`}
-                style={{ color: "white" }}
+            <div>
+              <SideButton style={{ backgroundColor: "#FBA423" }}>
+                <Link
+                  to={`/editstory/${this.state.id}`}
+                  style={{ color: "white" }}
+                >
+                  EDIT
+                </Link>
+              </SideButton>
+              <SideButton
+                style={{ backgroundColor: "#FBA423", color: "white" }}
+                onClick={this.helper}
               >
-                EDIT
-              </Link>
-            </SideButton>
-            <SideButton
-              style={{ backgroundColor: "#FBA423", color: "white" }}
-              onClick={this.helper}
-            >
-              DELETE
-            </SideButton>
+                DELETE
+              </SideButton>
+            </div>
           </div>
         </StyledStory>
       </div>

@@ -1,26 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { FormText } from "reactstrap";
-import styled from "styled-components";
 import Search from './Search';
 
-const SideButton = styled.button`
-  width: 5%;
-  padding: 0.5rem 0;
-  text-decoration: none;
-  text-align: center;
-  font-size: inherit;
-  font-weight: bold;
-  color: #00a3ff;
-  background-color: white;
-  border: none;
-  border-radius: 5px;
-  display: block;
-  cursor: pointer;
 
-  &:not(:last-child) {
-  }
-`;
 
 //  handleChange(event) {
 //     let StorysToSearch = [];
@@ -55,7 +37,7 @@ class Navbar extends Component {
           paddingTop: "1rem",
           paddingBottom: "1rem",
           width: "100vw",
-          boxShadow: "1px 5px 8px 3px rgba(0,0,0,0.75)"
+          boxShadow: "1px 3px 6px 2px rgba(0,0,0,0.75)"
 
         }}
       >
@@ -73,6 +55,17 @@ class Navbar extends Component {
             Storytelling
           </Link>
         </header>
+        <footer style={{
+          backgroundColor: "#00D9FF",
+          position: "fixed",
+          bottom: 0,
+          right: 0,
+          left: 0,
+          zIndex: 500,
+          paddingBottom: "6rem",
+          width: "100vw",
+
+        }}></footer>
 
       </nav>
     );

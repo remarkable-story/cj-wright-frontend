@@ -6,15 +6,15 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const SingleCard = styled.div`
-  padding: 3rem;
+  padding: 7rem;
   background-color: white;
-  width: 40rem;
+  width: 20rem;
   box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
 -webkit-box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
   height: 10rem;
   margin: 1.5rem;
-  border-radius: 5px;
+  border-radius: 300px;
 `;
 
 const CardTitle = styled.h3`

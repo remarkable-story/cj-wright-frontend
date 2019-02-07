@@ -1,9 +1,13 @@
 
 
-.App {
+.App{
   text-align: center;
   text-decoration: none;
-  background-image: linear-gradient(to bottom, #e0e2e4, #d8dcdc, #d2d5d4, #cccecc, #c7c7c5);
+  background-image: url("https://lh3.googleusercontent.com/pxPWx06weuwYKbTWua9vLFhExbD4wWeaB8a9PCjBBK3sD3QAOptErowYaEBcELAXqe7QY8j0eyGhDlS2mln3ITeSYCFUKd2O82tAweYs-phxbhfinOXK2ozoEuFB9smvMgH2zTJmGq5cNko5WmK6p7qmvAPF2CSFyiMBFVAis169TooTIxUoVO3MjFh52Z-VF0WidMYe3aw7Aj_mrf_Tb0qTygG1LD4S2w4oKJm8ob2MqzxoEGzK8GOYQogDxw2VFITwVWo9WdQYxLzFfRZy1wPr8J-Wdi6rlSWi8nb8WHvWUnu-BJJt1jg9Ykc0S6U37KrrJs0I1mDOvdI8QWGT144LY9tk5d4NiqcZpqluMcdzsHBC0qG2Nzh-05fqvB7_e6vrm8cRx3BHrHqSaNpQU6zdnQEfsMG0VeEZtajSRq9Ed2sY4txtXVeLsDJeUUgXW06VR7uTTIangP4lX7FfEsDsFidcjxubowJYt5JF6G5U0K5XrSa54a_n4b8Y3owi-VsjRxnivgHHn-gZrgqnDBByNLsEtr8gs2PV_1WQvsg_LbWANos5uKKS_dGucEXR9L9m-BYtzq8sXEh_Ek4QWB4fPN2bUj1bje577ESqwQ4j1Yuq_wkKGOSiaZ82YgwKo9SM2bIu_kfh0Fis_Pr_XGb_Id84EVNW=w1600-h1200-no");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 

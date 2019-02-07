@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import './login.css';
 import {
   Col,
@@ -9,7 +9,7 @@ import {
   Button,
 } from "reactstrap";
 
-export default class Login extends Component {
+export default class Login extends React.Component {
   constructor(props) {
     super(props);
 
@@ -27,7 +27,7 @@ export default class Login extends Component {
 
   render() {
     return (
-      < React.Fragment style={{zindex:"2000"}}>
+      < React.Fragment>
       <h1 className='title'>STORYTELLING</h1>
           <Form className="form">
             <h2>Login</h2>
