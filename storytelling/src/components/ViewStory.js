@@ -11,7 +11,7 @@ const SideButton = styled.button`
   text-align: center;
   font-size: inherit;
   font-weight: bold;
-  color: #FBA423;
+  color: #fba423;
   background-color: rgb(55.8%, 54.1%, 53.8%);
   border: none;
   border-radius: 5px;
@@ -49,25 +49,46 @@ class ViewStory extends Component {
   componentDidMount() {
     axios
       .get(
-        `https://remarkable-story-backend.herokuapp.com/api/stories${
+        `https://remarkable-story-backend.herokuapp.com/api/stories/${
           this.props.match.params.id
         }`
       )
-      .then(response => this.setState(response.data));
+      .then(response => this.setState({ story: response.data[0] }));
   }
   helper = () => {
     this.props.deleteStory(this.props.match.params.id);
     this.props.history.push("/");
   };
   render() {
-    return (
+    return this.state.story ? (
       <div>
-        <SecondaryHeading style={{ marginTop: "100px" }}>
-          {this.state.title}
-        </SecondaryHeading>
+        <SecondaryHeading style={{ marginTop: "100px", color:"white"}}>
+          {this.state.story.title}
+          <span style={{marginLeft:"40%", textDecoration:"underline"}}>Country: {this.state.story.country}</span>
+
+          </SecondaryHeading>
 
         <StyledStory>
           <div>
+            <div
+              style={{
+                display: "block",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "20rem",
+                border: "1.5px solid grey",
+                borderRadius: "6px",
+                fontSize: "16px",
+                padding: "4rem",
+                margin: "4rem",
+                lineHeight:"1.6",
+
+                backgroundColor: "rgba(255,255,255, 0.75)"
+
+              }}
+            >
+              {this.state.story.description}
+            </div>
             <SideButton style={{ backgroundColor: "#FBA423" }}>
               <Link
                 to={`/editstory/${this.state.id}`}
@@ -76,10 +97,17 @@ class ViewStory extends Component {
                 EDIT
               </Link>
             </SideButton>
-            <SideButton style={{backgroundColor: '#FBA423',color: 'white'}} onClick={this.helper}>DELETE</SideButton>
+            <SideButton
+              style={{ backgroundColor: "#FBA423", color: "white" }}
+              onClick={this.helper}
+            >
+              DELETE
+            </SideButton>
           </div>
         </StyledStory>
       </div>
+    ) : (
+      <h1>Story not found</h1>
     );
   }
 }

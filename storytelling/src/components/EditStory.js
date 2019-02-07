@@ -49,8 +49,8 @@ class EditStory extends Component {
   handleSubmit = event => {
     event.preventDefault();
     const newStory = {
-      title: this.state.title,
-      description: this.state.description
+      title: this.state.story.title,
+      description: this.state.story.description
     };
     console.log(newStory);
     this.props.editStory(this.props.match.params.id, newStory);
